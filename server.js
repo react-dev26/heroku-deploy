@@ -8,3 +8,5 @@ app.use(express.static(path.join(__dirname, 'dist')));
 const server = app.listen(port, () => {
   console.log(`Magic happens on port ${server.address().port}`);
 });
+
+app.start();

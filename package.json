@@ -16,9 +16,9 @@
     "test:coverage:verify": "nyc check-coverage",
     "test:coverage:report": "nyc report --reporter=html && opn coverage/index.html",
     "clean": "rimraf ./dist",
-    "build": "rimraf ./dist && webpack",
-    "deploy": "rimraf NODE_ENV=production webpack -p --config config/webpack/webpack.config.js",
-    "postinstall": "npm run build",
+    "build": "rimraf NODE_ENV=production webpack -p --config config/webpack/webpack.config.js",
+    "deploy": "rimraf ./dist && NODE_ENV=production webpack -p --config config/webpack/webpack.config.js",
+    "postinstall": "npm run deploy",
     "prod": "node server.js"
   },
   "ava": {
